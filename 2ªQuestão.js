@@ -1,13 +1,7 @@
-//Selecionar os elementos da Tele
-const a = document.querySelector("#lado1");
-const b = document.querySelector("#lado2");
-const c = document.querySelector("#lado3");
-const rr1 = document.querySelector("#raiz1");
-const rr2 = document.querySelector("#raiz2");
-const btn = document.querySelector("#verificar");
-const l1 = document.querySelector("#l1");
-const l2 = document.querySelector("#l2");
-const l3 = document.querySelector("#l3");
+const a = document.querySelector("#valorA");
+const b = document.querySelector("#valorB");
+const c = document.querySelector("#valorC");
+const btn = document.querySelector("#calcular");
 //Mostrar ao usuário que o campo não foi atendido
 a.onblur = () =>{
     if(a.value == ""){
@@ -36,20 +30,20 @@ c.onblur = () =>{
         c.style = "color: black";
     }
 }
-btn.onclick = () => {
+btn.onclick = () =>{
     if(a.value ==""){
         a.focus();
-    }else if(b.value ==""){
+    }
+    else if(b.value ==""){
         b.focus();
     }else if(c.value ==""){
         c.focus();
     }else{
-        triangulo(a.value, b.value, c.value);
+        calculando(a.value, b.value, c.value);
     }
 }
-
 //Fazendo a veriificação 
-const triangulo = (a, b, c) => {
+const calculando = (a, b, c) => {
     var delta =(b**2-(4*a*c));
       if (delta<0) {
         alert("Valor de Delta é: "+delta)
