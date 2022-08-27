@@ -2,6 +2,9 @@ const a = document.querySelector("#valorA");
 const b = document.querySelector("#valorB");
 const c = document.querySelector("#valorC");
 const btn = document.querySelector("#calcular");
+const l1 = document.querySelector("#l1");
+const l2 = document.querySelector("#l2");
+const l3 = document.querySelector("#l3");
 //Mostrar ao usuário que o campo não foi atendido
 a.onblur = () =>{
     if(a.value == ""){
